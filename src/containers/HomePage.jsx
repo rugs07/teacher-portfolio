@@ -56,7 +56,7 @@ function HomePage() {
       </div>
 
       {/* Info Section */}
-      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 mb-8 sm:mb-10">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
         <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 border-l-4 border-yellow-400 mt-4 sm:mt-8">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">माझ्याबद्दल</h3>
           <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -73,8 +73,56 @@ function HomePage() {
         </div>
       </div>
 
+      {/* Experience Section */}
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 border-l-4 border-green-400">
+          <h3 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">अनुभव</h3>
+          <ul className="space-y-8">
+            {/* Assistant Teacher */}
+            <li>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                <span className="font-semibold text-gray-800 text-base sm:text-lg">सहाय्यक शिक्षिका</span>
+                <span className="text-gray-500 text-xs sm:text-sm">२००२ - २०११</span>
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm mb-1">ऑरोबिंदो अक्षरज्योती स्कूल, परभणी, महाराष्ट्र</div>
+              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
+                <li>इयत्ता ७ ते १० च्या विद्यार्थ्यांना गणित शिकवले, जटिल संकल्पना सोप्या पद्धतीने समजावून सांगितल्या.</li>
+                <li>विद्यार्थ्यांच्या शैक्षणिक प्रगतीत मोजता येईल असा बदल घडवण्यासाठी नवीन अध्यापन पद्धती राबवल्या.</li>
+                <li>स्पर्धा परीक्षांसाठी विद्यार्थ्यांना मार्गदर्शन केले, त्यांची विचारशक्ती व समस्या सोडवण्याची क्षमता वाढवली.</li>
+              </ul>
+            </li>
+            {/* Senior Mathematics Teacher */}
+            <li>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                <span className="font-semibold text-gray-800 text-base sm:text-lg">वरिष्ठ गणित शिक्षिका</span>
+                <span className="text-gray-500 text-xs sm:text-sm">२०११ - वर्तमान</span>
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm mb-1">समर्थ विद्या मंदिर, परभणी, महाराष्ट्र</div>
+              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
+                <li>गणित विभागाचे नेतृत्व केले, इयत्ता ७ ते १० च्या विद्यार्थ्यांना संकल्पनात्मक स्पष्टता व परीक्षेची तयारी यावर भर देऊन अध्यापन केले.</li>
+                <li>९०% पेक्षा जास्त विद्यार्थ्यांनी बोर्ड परीक्षेत विशेष प्राविण्य मिळवले.</li>
+                <li>विद्यार्थ्यांचा सहभाग वाढवण्यासाठी कार्यशाळा व सेमिनार्स आयोजित केले.</li>
+              </ul>
+            </li>
+            {/* Franchise Abacus Teacher */}
+            <li>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                <span className="font-semibold text-gray-800 text-base sm:text-lg">फ्रँचायझी अबॅकस शिक्षिका</span>
+                <span className="text-gray-500 text-xs sm:text-sm">२०१८ - वर्तमान</span>
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm mb-1">आलमा अबॅकस, परभणी, महाराष्ट्र</div>
+              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
+                <li>ऑनलाइन व ऑफलाइन पद्धतीने ५००+ विद्यार्थ्यांना अबॅकसचे प्रशिक्षण दिले, त्यांच्या अंकगणित व बौद्धिक कौशल्यात वाढ केली.</li>
+                <li>अबॅकस शिक्षणाचे महत्त्व पटवून देण्यासाठी कार्यशाळा आयोजित केल्या.</li>
+                <li>फ्रँचायझीचे व्यवस्थापन यशस्वीरित्या केले, दर्जेदार प्रशिक्षण व विद्यार्थ्यांचे समाधान कायम राखले.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       {/* Activities Section */}
-      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 mb-8 sm:mb-12">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 h-full flex flex-col">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">मागील उपक्रम</h3>
           <div className="grid gap-5 sm:gap-8 grid-cols-1 sm:grid-cols-3">
@@ -100,7 +148,7 @@ function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-10 sm:mt-16 pb-2 sm:pb-4 text-gray-400 text-xs text-center px-2">© {new Date().getFullYear()} स्वाती बोधनकर | गणित शिक्षिका | श्री समर्थ विद्या मंदिर, परभणी</footer>
+      <footer className="mt-10 sm:mt-16 pb-2 sm:pb-4 text-gray-400 text-xs text-center px-2">© {new Date().getFullYear()} स्वाती बोधनकर | श्री समर्थ विद्या मंदिर, परभणी</footer>
     </div>
   );
 }
