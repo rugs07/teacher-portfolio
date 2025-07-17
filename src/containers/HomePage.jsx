@@ -1,4 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
+import InfoSection from "../components/InfoSection";
+import ExperienceSection from "../components/ExperienceSection";
+import ActivitiesSection from "../components/ActivitiesSection";
 
 const activities = [
   {
@@ -21,12 +25,52 @@ const activities = [
   },
 ];
 
-const quote = "गणित म्हणजे केवळ आकडेमोड नव्हे, तर विचार करण्याची कला आहे.";
+const experiences = [
+  {
+    years: "२००२ - २०११",
+    title: "सहाय्यक शिक्षिका",
+    place: "ऑरोबिंदो अक्षरज्योती स्कूल, परभणी, महाराष्ट्र",
+    details: [
+      "इयत्ता ७ ते १० च्या विद्यार्थ्यांना गणित शिकवले, जटिल संकल्पना सोप्या पद्धतीने समजावून सांगितल्या.",
+      "विद्यार्थ्यांच्या शैक्षणिक प्रगतीत मोजता येईल असा बदल घडवण्यासाठी नवीन अध्यापन पद्धती राबवल्या.",
+      "स्पर्धा परीक्षांसाठी विद्यार्थ्यांना मार्गदर्शन केले, त्यांची विचारशक्ती व समस्या सोडवण्याची क्षमता वाढवली.",
+    ],
+  },
+  {
+    years: "२०११ - वर्तमान",
+    title: "वरिष्ठ गणित शिक्षिका",
+    place: "समर्थ विद्या मंदिर, परभणी, महाराष्ट्र",
+    details: [
+      "गणित विभागाचे नेतृत्व केले, इयत्ता ७ ते १० च्या विद्यार्थ्यांना संकल्पनात्मक स्पष्टता व परीक्षेची तयारी यावर भर देऊन अध्यापन केले.",
+      "९०% पेक्षा जास्त विद्यार्थ्यांनी बोर्ड परीक्षेत विशेष प्राविण्य मिळवले.",
+      "विद्यार्थ्यांचा सहभाग वाढवण्यासाठी कार्यशाळा व सेमिनार्स आयोजित केले.",
+    ],
+  },
+  {
+    years: "२०१८ - वर्तमान",
+    title: "फ्रँचायझी अबॅकस शिक्षिका",
+    place: "आलमा अबॅकस, परभणी, महाराष्ट्र",
+    details: [
+      "ऑनलाइन व ऑफलाइन पद्धतीने ५००+ विद्यार्थ्यांना अबॅकसचे प्रशिक्षण दिले, त्यांच्या अंकगणित व बौद्धिक कौशल्यात वाढ केली.",
+      "अबॅकस शिक्षणाचे महत्त्व पटवून देण्यासाठी कार्यशाळा आयोजित केल्या.",
+      "फ्रँचायझीचे व्यवस्थापन यशस्वीरित्या केले, दर्जेदार प्रशिक्षण व विद्यार्थ्यांचे समाधान कायम राखले.",
+    ],
+  },
+];
+
+const aboutText = "नमस्कार! मी स्वाती बोधनकर, गेल्या २५ वर्षांपासून श्री समर्थ विद्या मंदिर, परभणी येथे गणित विषय शिकवते. विद्यार्थ्यांना गणिताची गोडी लागावी व त्यांचा बौद्धिक विकास व्हावा, यासाठी मी नेहमीच सर्जनशील व कृतीशील शिक्षणपद्धती वापरते।";
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
 
 function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-green-100 font-sans relative overflow-hidden">
-      {/* Animated/Decorative Math Background */}
+
       <svg className="absolute top-0 left-0 w-full h-64 pointer-events-none z-0 animate-pulse" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="200" cy="80" r="32" fill="#fde68a" fillOpacity="0.5" />
         <rect x="1200" y="40" width="48" height="48" rx="12" fill="#bbf7d0" fillOpacity="0.4" />
@@ -51,101 +95,17 @@ function HomePage() {
         <span className="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs font-bold mt-2">परभणी</span>
         {/* Inspirational Quote */}
         <div className="mt-6 mb-2 max-w-xl text-center">
-          <blockquote className="italic text-lg sm:text-xl text-yellow-800 font-semibold drop-shadow-sm">{quote}</blockquote>
+          <blockquote className="italic text-lg sm:text-xl text-yellow-800 font-semibold drop-shadow-sm">गणित म्हणजे केवळ आकडेमोड नव्हे, तर विचार करण्याची कला आहे.</blockquote>
         </div>
       </div>
 
-      {/* Info Section */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 border-l-4 border-yellow-400 mt-4 sm:mt-8">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">माझ्याबद्दल</h3>
-          <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
-            नमस्कार! मी स्वाती बोधनकर, गेल्या १५ वर्षांपासून श्री समर्थ विद्या मंदिर, परभणी येथे गणित विषय शिकवते. विद्यार्थ्यांना गणिताची गोडी लागावी व त्यांचा बौद्धिक विकास व्हावा, यासाठी मी नेहमीच सर्जनशील व कृतीशील शिक्षणपद्धती वापरते।
-          </p>
-          <div className="flex flex-col sm:flex-row sm:justify-between text-gray-600 text-xs sm:text-sm gap-1 sm:gap-0">
-            <div>
-              <span className="font-semibold">अनुभव:</span> १५+ वर्षे
-            </div>
-            <div>
-              <span className="font-semibold">संपर्क:</span> swatiparbhani@gmail.com
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Experience Section */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 border-l-4 border-green-400">
-          <h3 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">अनुभव</h3>
-          <ul className="space-y-8">
-            {/* Assistant Teacher */}
-            <li>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
-                <span className="font-semibold text-gray-800 text-base sm:text-lg">सहाय्यक शिक्षिका</span>
-                <span className="text-gray-500 text-xs sm:text-sm">२००२ - २०११</span>
-              </div>
-              <div className="text-gray-600 text-xs sm:text-sm mb-1">ऑरोबिंदो अक्षरज्योती स्कूल, परभणी, महाराष्ट्र</div>
-              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
-                <li>इयत्ता ७ ते १० च्या विद्यार्थ्यांना गणित शिकवले, जटिल संकल्पना सोप्या पद्धतीने समजावून सांगितल्या.</li>
-                <li>विद्यार्थ्यांच्या शैक्षणिक प्रगतीत मोजता येईल असा बदल घडवण्यासाठी नवीन अध्यापन पद्धती राबवल्या.</li>
-                <li>स्पर्धा परीक्षांसाठी विद्यार्थ्यांना मार्गदर्शन केले, त्यांची विचारशक्ती व समस्या सोडवण्याची क्षमता वाढवली.</li>
-              </ul>
-            </li>
-            {/* Senior Mathematics Teacher */}
-            <li>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
-                <span className="font-semibold text-gray-800 text-base sm:text-lg">वरिष्ठ गणित शिक्षिका</span>
-                <span className="text-gray-500 text-xs sm:text-sm">२०११ - वर्तमान</span>
-              </div>
-              <div className="text-gray-600 text-xs sm:text-sm mb-1">समर्थ विद्या मंदिर, परभणी, महाराष्ट्र</div>
-              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
-                <li>गणित विभागाचे नेतृत्व केले, इयत्ता ७ ते १० च्या विद्यार्थ्यांना संकल्पनात्मक स्पष्टता व परीक्षेची तयारी यावर भर देऊन अध्यापन केले.</li>
-                <li>९०% पेक्षा जास्त विद्यार्थ्यांनी बोर्ड परीक्षेत विशेष प्राविण्य मिळवले.</li>
-                <li>विद्यार्थ्यांचा सहभाग वाढवण्यासाठी कार्यशाळा व सेमिनार्स आयोजित केले.</li>
-              </ul>
-            </li>
-            {/* Franchise Abacus Teacher */}
-            <li>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
-                <span className="font-semibold text-gray-800 text-base sm:text-lg">फ्रँचायझी अबॅकस शिक्षिका</span>
-                <span className="text-gray-500 text-xs sm:text-sm">२०१८ - वर्तमान</span>
-              </div>
-              <div className="text-gray-600 text-xs sm:text-sm mb-1">आलमा अबॅकस, परभणी, महाराष्ट्र</div>
-              <ul className="list-disc list-inside text-gray-700 text-sm pl-4 mt-1 space-y-1">
-                <li>ऑनलाइन व ऑफलाइन पद्धतीने ५००+ विद्यार्थ्यांना अबॅकसचे प्रशिक्षण दिले, त्यांच्या अंकगणित व बौद्धिक कौशल्यात वाढ केली.</li>
-                <li>अबॅकस शिक्षणाचे महत्त्व पटवून देण्यासाठी कार्यशाळा आयोजित केल्या.</li>
-                <li>फ्रँचायझीचे व्यवस्थापन यशस्वीरित्या केले, दर्जेदार प्रशिक्षण व विद्यार्थ्यांचे समाधान कायम राखले.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Activities Section */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 h-full flex flex-col">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">मागील उपक्रम</h3>
-          <div className="grid gap-5 sm:gap-8 grid-cols-1 sm:grid-cols-3">
-            {activities.map((activity, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-lg shadow-md p-0 border-t-4 border-green-300 hover:scale-105 transition-transform duration-200 flex flex-col h-full"
-              >
-                <img
-                  src={activity.image}
-                  alt={activity.title}
-                  className="w-full h-32 sm:h-40 object-cover rounded-t-lg"
-                />
-                <div className="p-4 sm:p-5 flex flex-col flex-1">
-                  <h4 className="text-base sm:text-lg font-semibold text-green-800 mb-1">{activity.title}</h4>
-                  <span className="text-xs text-gray-500 mb-2 block">{activity.date}</span>
-                  <p className="text-gray-700 flex-1 text-xs sm:text-base">{activity.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <InfoSection
+        experienceYears="२५+ वर्षे"
+        contact="swatiparbhani@gmail.com"
+        aboutText={aboutText}
+      />
+      <ExperienceSection experiences={experiences} />
+      <ActivitiesSection activities={activities} />
 
       {/* Footer */}
       <footer className="mt-10 sm:mt-16 pb-2 sm:pb-4 text-gray-400 text-xs text-center px-2">© {new Date().getFullYear()} स्वाती बोधनकर | श्री समर्थ विद्या मंदिर, परभणी</footer>
