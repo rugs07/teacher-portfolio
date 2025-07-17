@@ -56,11 +56,11 @@ function HomePage() {
       </div>
 
       {/* Info Section */}
-      <div className="p-2">
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 w-full max-w-5xl mx-auto mb-8 sm:mb-10 border-l-4 border-yellow-400 mt-4 sm:mt-8">
+      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 mb-8 sm:mb-10">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 border-l-4 border-yellow-400 mt-4 sm:mt-8">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">माझ्याबद्दल</h3>
           <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">
-            नमस्कार! मी स्वाती बोधनकर, गेल्या १५ वर्षांपासून श्री समर्थ विद्या मंदिर, परभणी येथे गणित विषय शिकवते. विद्यार्थ्यांना गणिताची गोडी लागावी व त्यांचा बौद्धिक विकास व्हावा, यासाठी मी नेहमीच सर्जनशील व कृतीशील शिक्षणपद्धती वापरते.
+            नमस्कार! मी स्वाती बोधनकर, गेल्या १५ वर्षांपासून श्री समर्थ विद्या मंदिर, परभणी येथे गणित विषय शिकवते. विद्यार्थ्यांना गणिताची गोडी लागावी व त्यांचा बौद्धिक विकास व्हावा, यासाठी मी नेहमीच सर्जनशील व कृतीशील शिक्षणपद्धती वापरते।
           </p>
           <div className="flex flex-col sm:flex-row sm:justify-between text-gray-600 text-xs sm:text-sm gap-1 sm:gap-0">
             <div>
@@ -74,10 +74,10 @@ function HomePage() {
       </div>
 
       {/* Activities Section */}
-      <div className="p-1">
-        <div className="w-full max-w-6xl mx-auto px-2 sm:px-4">
+      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 mb-8 sm:mb-12">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 h-full flex flex-col">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">मागील उपक्रम</h3>
-          <div className="grid gap-5 sm:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid gap-5 sm:gap-8 grid-cols-1 sm:grid-cols-3">
             {activities.map((activity, idx) => (
               <div
                 key={idx}
